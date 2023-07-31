@@ -1,0 +1,48 @@
+{% extends 'technotes/base.html' %}
+<!-- {% load static %} -->
+
+{% block title %}
+{{item.slug}}
+{% endblock %}
+
+{% block css-file %}
+{% include 'technotes/includes/cssfiles.html' %}
+{% endblock %}
+
+{% block content %}
+<section class = "heading">
+    <h1> MyNote </h1>
+</section>
+{% include 'technotes/includes/header.html' %}
+<div class = "div-mid-flex">
+    <section class = "middle">
+        <a href="{% url "tech-filter" item.category %}"><h1>{{item.category | upper}}</h1></a>
+    </section>
+    </div>
+    <div class="add">
+        <font class="dothis"><a href="{% url "tech-form" %}">[Add Item]</a></font>
+        <font class="dothis"><a href="{% url 'tech-update' item.slug %}">[Update]</a></font>
+        <!-- <a href="{% url form_name|default:"tech-form" %}">[ADD]</a> -->
+    </div>
+    <div class = "div-mid-flex">
+        <section class="column middle mid-flex ">
+            <span><font class = "flex-box-list-title-large">{{item.title | lower}}</font></span>
+            <font class = "flex-box-list-content">{{item.description | linebreaks}}</font>
+
+        <div class="review-later">
+            <form action="{% url 'review-list'%}" method="POST">
+                {% csrf_token %}
+                <input type="hidden" value="{{item.id}}" name="review" />
+                <button>
+                    {% if not to_save %}
+                        add to review-list
+                    {% else %}
+                        remove from review-list
+                    {% endif %}
+                </button>
+
+        </form>
+        </div>
+        </section>
+    </div>
+{% endblock %}

@@ -1,0 +1,43 @@
+{% extends 'technotes/base.html' %}
+{% load static %}
+{% block title %}
+Home
+{% endblock %}
+{% block css-file %}
+<link rel="stylesheet" href = "{% static "background.css" %}" />
+<link rel="stylesheet" href = "{% static "layout.css" %}" />
+{% endblock %}
+{% block content %}
+<section class = "heading">
+    <h1> My Tech Note </h1>
+</section>
+<section class=" row">
+    
+<section class="section-paragraph">
+        <p>
+            Learn Live Life
+        </p>
+    </section>
+</section>
+
+<div class = "div-mid-flex">
+<section class = "middle">
+        <a href="{% url 'tech-sum' %}">
+            <h1>Technologies</h1>
+        </a>
+</section>
+</div>
+<section class="section-total">
+    ({% include 'technotes/includes/total-add.html' with url_name="tech-sum" form_name="tech-cat-form" c=tcount name='Add Technologies' %})
+    <font class="dothis"><a href="{% url "tech-form" %}">    [Add Item]</a></font>
+</section>
+<div class = "div-mid-flex">
+    {% for item in techs %}
+    <section class="column middle mid-flex">
+        <a href="{{item.get_absolute_url}}"><h1>{{item.title | lower }}</h1></a>
+    </section>
+    {% endfor %}  
+</div>
+
+
+{% endblock %}

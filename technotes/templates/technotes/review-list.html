@@ -1,0 +1,30 @@
+{% extends 'technotes/base.html' %}
+<!-- {% load static %} -->
+
+{% block title %}
+review-list
+{% endblock %}
+
+{% block css-file %}
+{% include 'technotes/includes/cssfiles.html' %}
+{% endblock %}
+
+{% block content %}
+<section class = "heading">
+    <h1> MyNote </h1>
+</section>
+{% include 'technotes/includes/header.html' %}
+    <div class = "review-list">
+
+        <ul>
+            {% if is_review_list %}
+                {% for item in items %}
+                    <li><a href="{% url "tech-detail" item.slug %}">{{item.title}}</a></li>
+                {% endfor %}
+            {% else %}
+                <li><p>There is no item in reviews list</p></li>
+            {% endif %}
+        </ul>
+    
+    </div>
+{% endblock %}

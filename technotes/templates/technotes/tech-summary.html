@@ -1,0 +1,35 @@
+{% extends 'technotes/base.html' %}
+<!-- {% load static %} -->
+
+{% block title %}
+Tech-summary
+{% endblock %}
+
+{% block css-file %}
+{% include 'technotes/includes/cssfiles.html' %}
+{% endblock %}
+
+{% block content %}
+<section class = "heading">
+    <h1> MyNote </h1>
+</section>
+{% include 'technotes/includes/header.html' %}
+    <div class = "div-mid-flex">
+    <section class = "middle">
+        <h1>Technologies</h1>
+    </section>
+    </div>
+    <section class="section-total">
+        ({% include 'technotes/includes/total-add.html' with url_name="tech-sum" form_name="tech-cat-form" c=count name='Add Technologies' %})
+        <font class="dothis"><a href="{% url "tech-form" %}">[Add Item]</a></font>
+    </section>
+    <div class = "div-mid-flex">
+        {% for item in category %}
+        <section class="column middle mid-flex">
+            <a href="{% url "tech-filter" item.name %}"><font class = "flex-box-list-title">{{item.name | title}}</font></a>
+            <font class="dothis action"><a href="{% url "cat-update" item.id%}">[Update]</a></font>
+        </section>
+        {% endfor %}
+    
+    </div>
+{% endblock %}

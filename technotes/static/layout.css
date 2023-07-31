@@ -1,0 +1,264 @@
+.heading {
+    margin-top: 5rem;
+    text-align: center;
+    font-size: 3rem;
+}
+
+.row {
+    width: 100%;
+    height: 12rem;
+    /* background-color: chocolate; */
+    margin-top: 3rem;
+    padding: 2px;
+    text-align: center;
+    border-radius: 25px;
+}
+
+.column {
+    float: left;
+    /* background-color: yellowgreen; */
+    /* display: inline; */
+    display: flex;
+    flex-direction: column;
+    border-radius: 25px;
+    flex-wrap: wrap;
+
+}
+
+.mid, .left, .right {
+    width: 100%;
+    height: 50%;
+    text-align: center;
+    margin: 0.1%;
+    justify-content: center;
+
+
+}
+ .mid {
+    background-color: lightcoral;
+ }
+ .left {
+    background-color: lightblue;
+ }
+.right {
+    background-color: lightgray;
+ }
+ 
+ .middle {
+    width: 100%;
+    /* border: 1px solid brown; */
+    background-color: cadetblue;
+    color: white;
+    height: 3rem;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 1rem;
+ }
+ 
+ .mid-flex,
+ .mid-flex-details {
+    background-color: blanchedalmond;
+    color: goldenrod;
+    height: auto;
+    text-align: left;
+    padding: 20px;
+    margin-top: 0.5rem;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+ }
+
+ .mid-flex {
+    width: max-content;
+
+ }
+
+ .mid-flex-details {
+    /* float: left; */
+    width: 50%;
+ }
+
+.div-mid-flex{
+    margin: 0.5rem 1rem;
+    /* margin-right: 10%; */
+    /* margin-top: 2rem; */
+    /* height: 100%; */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+
+.section-paragraph {
+    border-top: 1px solid silver; 
+    border-bottom: 1px solid silver;
+    margin-top:1rem; 
+    height: auto; 
+    /* border-radius: 25px; */
+    color: goldenrod; 
+    font-weight: bold;
+    font-size: 2rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    justify-content: center;;
+}
+
+.section-total {
+    text-align: center;
+    color: silver;
+    font-size: 1rem;
+}
+.section-total  a {
+    color: skyblue;
+    font-size: 1rem;
+}
+
+li {
+    list-style: none;
+    text-align: left;
+}
+
+a {
+    text-decoration: none;
+    color: chocolate   ;
+}
+a:hover {
+    color: blueviolet
+}
+.form-class {
+    /* margin: 1rem;
+    background-color: silver; */
+    padding: 10px;
+}
+.errorlist {
+    list-style: none;
+    margin: 0.5rem 2rem;
+    padding: 0;
+    color: red;
+    font-size: 0.8rem;
+  }
+  
+.error input {
+    border-color: red;
+  }
+  
+.error label {
+    color: red;
+  }
+
+button {
+    padding: 0.5rem 1.5rem;
+    border-radius: 6px;
+    float: right;
+    margin-right: 40%;
+  }
+.form-class label,
+.form-class input,
+.form-class select,
+.form-class textarea {
+    margin: 0 2rem;
+    display: block;
+
+}
+.form-class button {
+    width: 10%;
+    border-radius: 14px;
+}
+.form-class input{
+    width: 60%;
+    height: auto;
+}
+.form-class textarea {
+    width: 60%;
+    height: 30%
+}
+
+.dothis {
+    font-size: medium;
+    padding-left: 3px; 
+    font-weight: bolder
+}
+.action {
+    font-size: small;
+}
+.add {
+
+    text-align: center;
+}
+.add a {
+    font-weight: bold;
+    color: silver;
+
+}
+.add a:hover {
+    color: blueviolet
+}
+
+.review-later {
+    display: block;
+}
+.review-later button {
+    cursor: pointer;
+    float: left;
+    padding: 0.5rem 1rem;
+    color: white;
+    background-color: brown;
+    border: transparent
+ }
+ .review-later button:hover {
+    background-color: rgb(217, 71, 71);
+ }
+@media only screen and (max-width: 600px) {
+    .nav a {
+        font-size: small;
+        width: auto;
+    }
+    .row {
+        height: max-content;
+    }
+    .heading {
+        margin: 0.5rem ;
+    }
+    .mid-flex,
+    .mid-flex-details {
+        width: auto;
+        margin-top: 1%;
+        margin-right: 4%;
+        margin-left: 1%;
+        padding: 2px;
+    }
+    .section-paragraph {
+        font-size: x-large;
+        margin: 0.5rem 0
+    }
+    .div-mid-flex {
+        display: block;
+        margin: 0.5rem 0;
+
+       }
+    .review-list {
+        display: block;
+        margin: 0.5rem 0;
+       }
+    
+    .review-list ul li a {
+        color: blue;
+    }
+    .form-class,
+    .form-class label,
+    .form-class input,
+    .form-class select,
+    .form-class textarea,
+    .form-class button {
+        margin: 2px 2px;
+        width: 90%;
+        display: block;
+        font-size: small;
+
+    }
+    .action {
+        font-size: x-small;
+        padding: 0.25rem 0.5rem
+    }
+}
+

@@ -1,0 +1,31 @@
+{% extends 'technotes/base.html' %}
+<!-- {% load static %} -->
+
+{% block title %}
+{{item.slug}}
+{% endblock %}
+
+{% block css-file %}
+{% include 'technotes/includes/cssfiles.html' %}
+{% endblock %}
+
+{% block content %}
+<section class = "heading">
+    <h1> MyNote </h1>
+</section>
+{% include 'technotes/includes/header.html' %}
+
+<form method="POST" style="background-color: silver;">
+    {% csrf_token %}
+        {% for item in form %}
+        <div class="form-class {% if item.errors %}error{% endif %}">
+            {{item.label_tag}}
+            {{item}}
+            {{item.errors}}
+        </div>
+        {% endfor %}
+        <button> Update </button>
+</form>
+
+</div>
+{% endblock %}

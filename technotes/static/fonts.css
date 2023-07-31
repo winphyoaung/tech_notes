@@ -1,0 +1,46 @@
+h1, h2 {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.flex-box-list-title {
+    font-size: 3rem;
+    font-weight: bold;
+
+    color: brown;
+}
+.flex-box-list-title-large {
+    font-size: 5rem;
+    font-weight: bold;
+
+    color: brown;
+}
+
+.flex-box-list-content {
+    font-size: 2rem;
+    color: black;
+    padding-left: 1rem;
+}
+
+.section-total h1 {
+    font-size: 2rem;
+    color: goldenrod;
+}
+
+.form-class {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: medium;
+}
+
+@media only screen and (max-width: 900px) {
+    .flex-box-list-title {
+        font-size: auto;
+    }
+    .flex-box-list-content {
+        font-size: 1.5rem;
+    }
+    .flex-box-list-title {
+        font-weight: bold;
+    }
+
+}
+

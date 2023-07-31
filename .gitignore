@@ -1,0 +1,8 @@
+mysql-data/
+mynote/__pycache__/
+technotes/__pycache__/
+technotes/migrations/__pycache__/
+db.sqlite3
+.ebextensions/
+code.zip
+
